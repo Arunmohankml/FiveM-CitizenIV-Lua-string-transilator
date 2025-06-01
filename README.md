@@ -19,8 +19,12 @@ A Python-based bulk translator designed to **translate Lua strings** in scripts 
 
 ## 📁 File Structure
 
-├── translator.py            # Main translator script ├── functions.txt            # List of function names to scan (one per line) ├── blacklist.txt            # List of blacklisted words/phrases to skip ├── backup/                  # Backup of original Lua file (file mode only) ├── myscript.lua             # Example original Lua script ├── myscript_translated/     # Translated output (folder mode)
-
+├── translator.py             # Main translator script  
+├── functions.txt             # List of function names to scan (one per line)  
+├── blacklist.txt             # List of blacklisted words/phrases to skip  
+├── backup/                   # Backup of original Lua file (file mode only)  
+├── myscript.lua              # Example original Lua script  
+├── myscript_translated/      # Translated output (folder mode)
 ---
 
 ## 🛠️ How It Works
