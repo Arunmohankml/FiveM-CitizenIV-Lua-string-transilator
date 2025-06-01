@@ -1,0 +1,4 @@
+Notify
+DisplayTextWithLiteralString
+TriggerEvent("noticeme:Info"
+SendMessageToNearbyPlayers
