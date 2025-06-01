@@ -173,10 +173,3 @@ If this saved you time, consider starring ⭐ the repo or contributing via pull 
 
 ---
 
-Let me know if you’d like:
-- A badge layout (`build`, `license`, `python`, etc.)
-- A sample GIF or screenshot in the README
-- A `.md` file version of this content
-
-Want it published for you as a real GitHub repo README? I can help prep the full repo layout too.
-
