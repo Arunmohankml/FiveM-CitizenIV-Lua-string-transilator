@@ -1,6 +1,3 @@
-Here’s a beautified and enhanced version of your README.md using GitHub Markdown best practices, emojis, and formatting effects for better readability and professional appearance:
-
-
 ---
 
 # 🌍 FiveM & CitizenIV Lua String Translator
