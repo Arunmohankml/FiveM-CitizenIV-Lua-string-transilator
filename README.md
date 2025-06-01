@@ -1,176 +1,181 @@
-# FiveM-CitizenIV-Lua-string-transilator
-A python bulk transilator used to transilate lua strings expecially for CitizenIV and FiveM.
-
-
-🌍 Lua String Translator for CitizenIV / FiveM
-
-This Python tool helps developers translate Lua string values in their CitizenIV and FiveM scripts into any language using Google Translate. It is highly customizable and safe, with support for:
-
-🔎 Translating only within specific function calls
-
-📂 File or folder translation modes
-
-📄 Automatic backup (for single file mode)
-
-⛔ Word blacklist support
-
-🧠 Ignores short or sensitive terms (1–2 letters, event names, etc.)
-
+Here’s a beautified and enhanced version of your README.md using GitHub Markdown best practices, emojis, and formatting effects for better readability and professional appearance:
 
 
 ---
 
-📦 Features
+# 🌍 FiveM & CitizenIV Lua String Translator
 
-✅ Translate strings in Lua files
-✅ Translate specific functions only (defined in functions.txt)
-✅ Skip sensitive terms using blacklist.txt
-✅ Automatically backup files (in file mode)
-✅ Translate entire folder (outputs to <foldername>_translated)
-✅ Ignores short strings like "a", "ok" etc.
-
+A Python-based bulk translator designed to **translate Lua strings** in scripts for **CitizenIV** and **FiveM**. This tool utilizes **Google Translate** to localize your game scripts while ensuring sensitive or short strings stay untouched.
 
 ---
 
-🛠 How It Works
+## 🚀 Features
 
-1. Scans Lua files for lines containing function names (e.g. ShowText("Hello"))
-
-
-2. Translates all "quoted strings" in those lines (unless blacklisted or too short)
-
-
-3. Saves the result to:
-
-A backup folder (backup/) for single file mode
-
-A new folder (yourfolder_translated/) for folder mode
-
-
-
-
+✅ Translate strings in Lua files  
+✅ Target **specific functions** only (defined in `functions.txt`)  
+✅ 🔒 Skip sensitive strings using `blacklist.txt`  
+✅ 🧠 Ignores short/1-2 letter strings like `"a"`, `"ok"`  
+✅ 📦 Automatically backs up files (in file mode)  
+✅ 📂 Translate entire folders — outputs to a new `_translated` folder  
 
 ---
 
-📁 File Structure
+## 📁 File Structure
 
-├── translator.py          # Main script
-├── functions.txt          # Functions to scan for
-├── blacklist.txt          # Strings to skip translating
-├── backup/                # Backup of original file (file mode only)
-├── myscript.lua           # Original script
-├── myscript_translated/   # Output folder for translated Lua files (folder mode)
-
+├── translator.py            # Main translator script ├── functions.txt            # List of function names to scan (one per line) ├── blacklist.txt            # List of blacklisted words/phrases to skip ├── backup/                  # Backup of original Lua file (file mode only) ├── myscript.lua             # Example original Lua script ├── myscript_translated/     # Translated output (folder mode)
 
 ---
 
-✏️ Setup
+## 🛠️ How It Works
 
-1. Install Requirements
+1. 🔍 Scans for function names defined in `functions.txt`  
+2. 🧠 Looks for all double-quoted strings in those lines  
+3. 🌐 Translates strings using Google Translate (unless blacklisted or too short)  
+4. 💾 Saves the result either as:
+   - A **backup copy** (`backup/`) for single file mode
+   - A **new folder** (`yourfolder_translated/`) for folder mode
 
+---
 
+## 🧩 Setup
 
+### 1. Install Required Library
+```bash
 pip install deep-translator
 
-2. Create helper files:
+2. Create Helper Files
 
+functions.txt
 
-
-functions.txt: Add one function per line (e.g. ShowText, DisplayHelp)
-
-blacklist.txt: Add words or event names to exclude from translation (e.g. "STRING", "event:trigger")
-
-
-
----
-
-🚀 Usage
-
-Run the script:
-
-python translator.py
-
-Choose mode:
-
-Type file → then enter a Lua file (e.g. main.lua)
-
-Type folder → then enter a folder name (e.g. client_scripts/)
-
-
-Enter target language:
-
-Examples:
-
-pt → Portuguese
-
-ml → Malayalam
-
-en → English
-
-
-
----
-
-🧠 How to Customize
-
-Add functions you want to scan in functions.txt
+List Lua functions whose strings you want to translate:
 
 ShowText
 DrawText3D
 NotifyPlayer
 
-Add blacklist words to skip:
+blacklist.txt
+
+Words/phrases you want to skip during translation:
 
 "STRING"
-"event:message"
+"noticeme:info"
 
-Change translation language by typing new code when prompted (e.g. fr for French)
+
+---
+
+🧪 Usage
+
+Run the Script
+
+python translator.py
+
+Choose Mode
+
+file → Enter a Lua filename (e.g. main.lua)
+
+folder → Enter a folder name (e.g. client_scripts/)
+
+
+Enter Language Code
+
+Examples:
+
+pt → Portuguese  
+ml → Malayalam  
+en → English  
+fr → French  
+hi → Hindi
+
+
+---
+
+🌍 Supported Languages
+
+Google Translate supports 100+ languages. View the full list here or check below for some common ones:
+
+Code	Language	Code	Language
+
+en	English	fr	French
+pt	Portuguese	hi	Hindi
+ml	Malayalam	ru	Russian
+es	Spanish	de	German
+ar	Arabic	ja	Japanese
+zh-cn	Chinese (Sim)	ko	Korean
 
 
 
 ---
 
-❗ Known Limitations
+✨ Example
 
-Translates only lines with matching function names or lines starting with words inisde functions.txt
-
-Does not parse Lua deeply (just regex + line matching)
-
-May mistranslate phrases if the original string is ambiguous
-
-
-
----
-
-🧊 Example
-
-Original Lua:
+🎯 Original Lua
 
 ShowText("Welcome", "You are entering the zone")
 TriggerEvent("noticeme:info", "STRING")
 
-Translated (e.g. to French):
+🔁 After Translation (e.g., to French)
 
 ShowText("Bienvenue", "Vous entrez dans la zone")
-TriggerEvent("noticeme:info", "STRING") -- skipped bcz those words are blacklisted!
+TriggerEvent("noticeme:info", "STRING") -- skipped (blacklisted)
+
+
+---
+
+⚙️ Customization Tips
+
+Add new function names in functions.txt
+
+Add event names or critical terms to blacklist.txt
+
+Change the translation target anytime via prompt
+
+Only strings inside "double quotes" get translated
+
+
+
+---
+
+⚠️ Known Limitations
+
+❌ Does not parse complex Lua syntax deeply — relies on regex
+
+❌ Won't translate strings outside of defined function lines
+
+❌ May mistranslate rare or ambiguous words — review results if needed
+
 
 
 ---
 
 👨‍💻 Made For
 
-CitizenIV GTA IV servers
+🎮 CitizenIV (GTA IV servers)
 
-FiveM GTA V environments
+🚓 FiveM (GTA V roleplay servers)
 
-Works on any Lua script with string functions
+🧪 Any Lua-based scripts needing string localization
+
 
 
 ---
 
 📜 License
 
-MIT License — Free to use and modify!
+MIT License — Free to use, modify, and contribute!
 
 
 ---
+
+🌟 Contribute or Star!
+
+If this saved you time, consider starring ⭐ the repo or contributing via pull requests!
+
+---
+
+Let me know if you’d like:
+- A badge layout (`build`, `license`, `python`, etc.)
+- A sample GIF or screenshot in the README
+- A `.md` file version of this content
+
+Want it published for you as a real GitHub repo README? I can help prep the full repo layout too.
+
