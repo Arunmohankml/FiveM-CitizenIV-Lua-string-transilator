@@ -92,7 +92,7 @@ hi → Hindi
 
 🌍 Supported Languages
 
-Google Translate supports 100+ languages. View the full list here or check below for some common ones:
+Google Translate supports 100+ languages. View the full list [here](https://cloud.google.com/translate/docs/LANGUAGES)or check below for some common ones:
 
 Code	Language	Code	Language
 
