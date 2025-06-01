@@ -94,16 +94,15 @@ hi → Hindi
 Google Translate supports 100+ languages. View the full list [here](https://cloud.google.com/translate/docs/LANGUAGES)or check below for some common ones:
 ```
 
-Code	Language	Code	Language
-
-en	English	fr	French
-pt	Portuguese	hi	Hindi
-ml	Malayalam	ru	Russian
-es	Spanish	de	German
-ar	Arabic	ja	Japanese
-zh-cn	Chinese (Sim)	ko	Korean
-
-
+Code	Language	
+en	English	
+pt	Portuguese	
+ml	Malayalam	
+es	Spanish	
+ar	Arabic	
+zh-cn	Chinese 
+ru russian
+....
 
 ---
 
