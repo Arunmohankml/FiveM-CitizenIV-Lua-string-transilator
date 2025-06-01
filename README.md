@@ -41,8 +41,10 @@ A Python-based bulk translator designed to **translate Lua strings** in scripts 
 ## 🧩 Setup
 
 ### 1. Install Required Library
-```bash
+```
+bash
 pip install deep-translator
+```
 
 2. Create Helper Files
 
@@ -60,7 +62,6 @@ Words/phrases you want to skip during translation:
 
 "STRING"
 "noticeme:info"
-
 
 ---
 
@@ -90,9 +91,9 @@ hi → Hindi
 ---
 
 🌍 Supported Languages
-```
+
 Google Translate supports 100+ languages. View the full list [here](https://cloud.google.com/translate/docs/LANGUAGES)or check below for some common ones:
-```
+
 
 Code	Language	
 en	English	
